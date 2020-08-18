@@ -3,13 +3,11 @@ flatten is a function which does something like this. Given an array with other 
 
 Create a function flatten which will take in an array containing elements including nested arrays of elements, and return a "flattened" version of the array.
 */
-const unpack = function(array) {
-  unpackedArray = [];
-  
-}
 
 const flatten = function(arrayOfArrays) {
-  let flattened = true;;
-    arrayOfArrays.forEach(a => a.isArray() ? 
-  }
+  let returnArray = [];
+  arrayOfArrays.forEach(val => Array.isArray(val) ? val.forEach(subVal => returnArray.push(subVal)) : returnArray.push(val));
+  return returnArray;
 };
+
+console.log(flatten([1, 2, [3, 4], 5, 6, 7, 8, [9, 10]]));
