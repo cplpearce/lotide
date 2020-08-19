@@ -19,6 +19,9 @@ const eqArrays = function(actual, expected) {
   for (const [i, val] of actual.entries()) {
     if (val !== expected[i]) match = false;
   }
+  for (const [i, val] of expected.entries()) {
+    if (val !== actual[i]) match = false;
+  }
   return (match ? console.log(`👍 Assertion Passed: ${actual} === ${expected}`) : console.log(`⛔ Assertion Failed: ${actual} !== ${expected}`));
 };
 
@@ -29,7 +32,7 @@ const results2 = map(words, word => word[1]);
 const results3 = map(words, word => word[2]);
 const results4 = map(words, word => word[3]);
 
-console.log(eqArrays(results1, ['g', 'c', 't', 'm', 't']));
-console.log(eqArrays(results2, ['r', 'o', 'o', 'a', 'o']));
-console.log(eqArrays(results3, ['o', 'n', undefined, 'j', 'm']));
-console.log(eqArrays(results4, ['u', 't', undefined, 'o', undefined]));
+eqArrays(results1, ['g', 'c', 't', 'm', 't']);
+eqArrays(results2, ['r', 'o', 'o', 'a', 'o']);
+eqArrays(results3, ['o', 'n', undefined, 'j', 'm']);
+eqArrays(results4, ['u', 't', undefined, 'o', undefined]);
