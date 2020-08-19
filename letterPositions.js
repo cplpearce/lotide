@@ -1,3 +1,12 @@
+const letterPositions = function(sentence) {
+  const results = {};
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] === ' ') continue;
+    results[sentence[i]] === undefined ? results[sentence[i]] = [i] : results[sentence[i]].push(i);
+  }
+  return results;
+};
+
 const eqArrays = function(actual, expected) {
   let match = true;
   while (match) {
@@ -10,8 +19,5 @@ const eqArrays = function(actual, expected) {
   return (match ? console.log(`👍 Assertion Passed: ${actual} === ${expected}`) : console.log(`⛔ Assertion Failed: ${actual} !== ${expected}`));
 };
 
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
-
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+const result = letterPositions('this is a test');
+eqArrays(result['t'], [ 0, 10, 13 ]);
