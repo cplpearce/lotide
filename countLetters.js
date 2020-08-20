@@ -12,3 +12,5 @@ const countLetters = function(string) {
 
 const result = countLetters('Thisss');
 assertEqual(result['s'], {s : 3}.s);
+
+// test
