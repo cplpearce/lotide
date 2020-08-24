@@ -28,4 +28,4 @@ The following functions are currently implemented:
 
 * `head(array)`: returns index 0 of an array
 * `tail(array)`: returns index 0 of a length 1 array or splice(1) of a larger array
-* `middle(array)`: returms a snarky string if arrary length is 2 or less or returns the middle 1/2 indexes values.
+* `middle(array)`: returns a snarky string if array length is 2 or less, or returns the middle 1/2 indexes values.

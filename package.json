@@ -1,6 +1,6 @@
 {
   "name": "@mighthire/lotide",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lodash fork for Lighthouse Labs Web Dev Crse",
   "main": "assertArraysEqual.js",
   "directories": {
