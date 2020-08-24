@@ -9,5 +9,3 @@ const flatten = function(arrayOfArrays) {
   arrayOfArrays.forEach(val => Array.isArray(val) ? val.forEach(subVal => returnArray.push(subVal)) : returnArray.push(val));
   return returnArray;
 };
-
-console.log(flatten([1, 2, [3, 4], 5, 6, 7, 8, [9, 10]]));

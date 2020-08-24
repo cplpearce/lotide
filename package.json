@@ -1,6 +1,6 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
+  "name": "@mighthire/lotide",
+  "version": "1.0.2",
   "description": "Lodash fork for Lighthouse Labs Web Dev Crse",
   "main": "assertArraysEqual.js",
   "directories": {
@@ -13,7 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/cplpearce/lotide.git"
   },
-  "author": "",
+  "author": "Clinton Pearce",
+  "email": "clint.pearce@rocketmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cplpearce/lotide/issues"
