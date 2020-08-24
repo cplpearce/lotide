@@ -1,16 +1,15 @@
-const eqArrays = function(actual, expected) {
+const eqArrays = function(a1, a2) {
   let match = true;
-  for (const [i, val] of actual.entries()) {
-    if (val !== expected[i]) match = false;
+  const len = a1.length;
+  if (a1.length !== a2.length) return false;
+  for (let el = 0; el < len; el++) {
+    if (Array.isArray(a1[el]) || Array.isArray(a2[el])) {
+      match = match && eqArrays(a1[el], a2[el]);
+    } else if (a1[el] !== a2[el]) {
+      match = false;
+    }
   }
-  for (const [i, val] of expected.entries()) {
-    if (val !== actual[i]) match = false;
-  }
-  return (match ? console.log(`👍 Assertion Passed: ${actual} === ${expected}`) : console.log(`⛔ Assertion Failed: ${actual} !== ${expected}`));
+  return match;
 };
 
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
-
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+module.exports = eqArrays;
